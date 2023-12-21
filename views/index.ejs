@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<div class="section1">
+    <h4>Crypto Symbol Price Checker</h4>
+    <!-- Span to print out result -->
+    <span class="result-span">
+        <p>The Result for the searched query are:</p>
+        <ul>
+            <li>Currency: <%=symbol %></li>
+            <li>LTP: <%=ltp %> USD</li>
+            <li>Volume In 24H: <%=vol24hr%></li>
+            
+            
+        </ul>
+    </span>
+    <br>
+
+    <!-- Form to fill in order to  get the price -->
+    <form class="" action="" method="POST">
+        <label for="symbolInput">Crypto Symbol</label>
+        <br>
+        <input type="text" id="symbolInput" name ="symbol" placeholder="Enter the symbol"> 
+        <input type="submit" value="Submit" formaction="/get-price" >
+
+    </form>
+
+</div>
+
+
+
+
+<%- include("partials/footer.ejs") %>
